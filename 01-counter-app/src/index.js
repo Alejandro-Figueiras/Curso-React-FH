@@ -1,8 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-
-const saludo = <h1>Hola Mundo</h1>
+//import ReactDOM from 'react-dom'
+import ReactDOMClient from 'react-dom/client'
+import PrimeraApp from './PrimeraApp'
+import './index.css';
 
 const divRoot = document.querySelector('#root')
 
-ReactDOM.render(saludo, divRoot)
+// Nuevo After React18
+const root = ReactDOMClient.createRoot(divRoot); // createRoot(container!) if you use TypeScript
+root.render(<PrimeraApp />);
