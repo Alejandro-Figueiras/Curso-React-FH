@@ -6,7 +6,7 @@ html, body {
     padding: 20px;
 }
 
-#botonclick {
+.botonclick {
     background-color: #111316;
     color: white;
     font-size: 1.3rem;

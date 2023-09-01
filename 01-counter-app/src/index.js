@@ -8,4 +8,4 @@ const divRoot = document.querySelector('#root')
 
 // Nuevo After React18
 const root = ReactDOMClient.createRoot(divRoot); // createRoot(container!) if you use TypeScript
-root.render(<CounterApp value={10} />);
+root.render(<CounterApp />);
