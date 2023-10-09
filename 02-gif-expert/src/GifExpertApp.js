@@ -13,7 +13,7 @@ export const GifExpertApp = () => {
         <>
             <h2>GifExpertApp</h2>
             <hr/>
-            <AddCategory />
+            <AddCategory setCategories={setCategories}/>
             <button>Agregar</button>
             <ol>
                 {
