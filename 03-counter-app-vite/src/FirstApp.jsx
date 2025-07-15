@@ -1,9 +1,9 @@
 
-const FirstApp = () => {
+const FirstApp = ({ title = 'Hola' }) => {
+
   return (
     <> {/* <-- Fragment */}
-
-      <h1>Alejandro</h1>
+      <h1>{title}</h1>
       <p>Soy un subtitulo</p>
     </>
   )
