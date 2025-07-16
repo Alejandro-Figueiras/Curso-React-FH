@@ -1,6 +1,6 @@
 
 export const getImagen = async () => {
-    const resp = await fetch('https://google.com')
-    return await resp.text()
-
+    // const resp = await fetch('https://google.com')
+    // return await resp.text()
+    return 'asdasdasdas' 
 }
