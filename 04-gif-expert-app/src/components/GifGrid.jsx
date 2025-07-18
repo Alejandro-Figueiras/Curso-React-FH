@@ -16,3 +16,5 @@ export const GifGrid = ({ category }) => {
 		</div>
 	)
 }
+
+export default GifGrid
