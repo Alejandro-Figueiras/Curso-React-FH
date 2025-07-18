@@ -11,4 +11,13 @@ describe("Pruebas en <GifItem />", () => {
 
     expect(container).toMatchSnapshot();
   })
+
+  test("should show the image with the URL and ALT of the GIF", () => {
+    const { getByRole } = render(<GifItem title={title} url={url} />)
+
+    const { src, alt } = getByRole('img');
+
+    expect(src).toBe(url);
+    expect(alt).toBe(title);
+  })
 })
