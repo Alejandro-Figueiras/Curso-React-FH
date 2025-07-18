@@ -1,11 +1,12 @@
 import { useState } from "react"
 import AddCategory from "./components/AddCategory"
+import GifGrid from "./components/GifGrid"
 
 const GifExpertApp = () => {
 	const [categories, setCategories] = useState([])
 
 	const handleNewValue = (newCategory) => {
-		setCategories(c => [newCategory, ...(c.filter(c => c!= newCategory))])
+		setCategories((c) => [newCategory, ...c.filter((c) => c != newCategory)])
 	}
 
 	return (
@@ -14,11 +15,9 @@ const GifExpertApp = () => {
 
 			<AddCategory onNewValue={handleNewValue} />
 
-			<ol>
-				{categories.map((c) => (
-					<li key={c}>{c}</li>
-				))}
-			</ol>
+			{categories.map((c) => (
+				<GifGrid category={c} key={c} />
+			))}
 		</>
 	)
 }
