@@ -15,7 +15,7 @@ describe('Pruebas en el hook useFetchGifs', () => {
   test("should return an array of images and isLoading false", async () => {
     const { result } = renderHook(() => useFetchGifs('One Punch'));
 
-    await waitFor(() => expect(result.current.isLoading).toBeFalsy());
+    await waitFor(() => expect(result.current.images.length).toBeGreaterThan(0));
 
     const { images, isLoading } = result.current;
 

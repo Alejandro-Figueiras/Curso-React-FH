@@ -15,9 +15,11 @@ const GifExpertApp = () => {
 
 			<AddCategory onNewValue={handleNewValue} />
 
-			{categories.map((c) => (
-				<GifGrid category={c} key={c} />
-			))}
+			<div data-testid="grid-container">
+				{categories.map((c) => (
+					<GifGrid category={c} key={c} />
+				))}
+			</div>
 		</>
 	)
 }
