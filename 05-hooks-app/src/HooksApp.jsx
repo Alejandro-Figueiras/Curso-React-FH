@@ -2,7 +2,9 @@
 // import CounterWithCustomHook from "./01-useState/CounterWithCustomHook"
 // import FormWithCustomHook from "./02-useEffect/FormWithCustomHook"
 // import SimpleForm from "./02-useEffect/SimpleForm"
-import MultipleCustomHooks from "./03-examples/MultipleCustomHooks"
+// import MultipleCustomHooks from "./03-examples/MultipleCustomHooks"
+
+import FocusScreen from "./04-useRef/FocusScreen"
 
 const HooksApp = () => {
 	return (
@@ -14,7 +16,9 @@ const HooksApp = () => {
 			{/* <SimpleForm /> */}
 			{/* <FormWithCustomHook /> */}
 
-			<MultipleCustomHooks />
+			{/* <MultipleCustomHooks /> */}
+
+			<FocusScreen />
 		</>
 	)
 }
