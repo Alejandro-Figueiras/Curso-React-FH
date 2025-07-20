@@ -4,12 +4,13 @@
 // import SimpleForm from "./02-useEffect/SimpleForm"
 // import MultipleCustomHooks from "./03-examples/MultipleCustomHooks"
 // import FocusScreen from "./04-useRef/FocusScreen"
-import Layout from "./05-useLayoutEffect/Layout"
+// import Layout from "./05-useLayoutEffect/Layout"
+import Memorize from "./06-memos/Memorize"
 
 const HooksApp = () => {
 	return (
 		<>
-			<h1 className="title">HooksApp</h1>
+			<h1 className='title'>HooksApp</h1>
 			{/* <CounterApp /> */}
 			{/* <CounterWithCustomHook /> */}
 
@@ -20,7 +21,9 @@ const HooksApp = () => {
 
 			{/* <FocusScreen /> */}
 
-			<Layout />
+			{/* <Layout /> */}
+
+			<Memorize />
 		</>
 	)
 }
