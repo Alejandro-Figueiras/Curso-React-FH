@@ -11,12 +11,15 @@
 // import { Padre } from "./07-tarea-memo/Padre"
 
 // import './08-useReducer/intro-reducer'
-import TodoApp from "./08-useReducer/TodoApp"
+// import TodoApp from "./08-useReducer/TodoApp"
+
+import { BrowserRouter } from "react-router"
+import MainApp from "./09-useContext/MainApp"
 
 const HooksApp = () => {
 	return (
 		<>
-			<h1 className='title'>HooksApp</h1>
+			{/* <h1 className='title'>HooksApp</h1> */}
 			{/* <CounterApp /> */}
 			{/* <CounterWithCustomHook /> */}
 
@@ -35,7 +38,11 @@ const HooksApp = () => {
 
 			{/* <Padre /> */}
 
-			<TodoApp />
+			{/* <TodoApp /> */}
+
+			<BrowserRouter>
+				<MainApp />
+			</BrowserRouter>
 		</>
 	)
 }
