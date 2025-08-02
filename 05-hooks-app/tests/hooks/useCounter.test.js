@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react'
+import { renderHook, act} from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
 import { useCounter } from '../../src/hooks/useCounter'
 
@@ -12,6 +12,48 @@ describe('pruebas en useCounter', () => {
     expect(reset).toEqual(expect.any(Function))
   })
 
-  
+  test('debe tener el valor inicial', () => {
+    const { result } = renderHook(() => useCounter(100))
+    const { counter } = result.current
+    expect(counter).toBe(100)
+  })
+
+  test('debe incrementar el contador', () => {
+    const { result } = renderHook(() => useCounter())
+    const { increment } = result.current
+
+    act(() => {
+      increment()
+      increment(2)
+    })
+    const { counter } = result.current
+
+    expect(counter).toBe(3)
+  })
+
+  test('debe decrementar el contador', () => {
+    const { result } = renderHook(() => useCounter())
+    const { decrement } = result.current
+
+    act(() => {
+      decrement()
+      decrement(2)
+    })
+    const { counter } = result.current
+
+    expect(counter).toBe(-3)
+  })
+
+  test('debe reiniciar el contador', () => {
+    const { result } = renderHook(() => useCounter(100))
+    const { reset, increment, counter } = result.current
+
+    act(() => {
+      increment()
+      reset()
+    })
+
+    expect(counter).toBe(100)
+  })
 
 })
