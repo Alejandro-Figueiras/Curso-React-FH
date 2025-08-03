@@ -59,7 +59,7 @@ describe("Pruebas en <TodoItem />", () => {
 		expect(onToggleTodo).toHaveBeenCalledWith(todo.id)
 	})
 	test("debe de llamar handleDeleteTodo al hacer click en el botón de borrar", () => {
-		const { getByRole } = render(
+		const { getAllByRole } = render(
 			<TodoItem
 				id={todo.id}
 				todo={todo.description}
@@ -68,7 +68,7 @@ describe("Pruebas en <TodoItem />", () => {
 				onToggleTodo={onToggleTodo}
 			/>
 		)
-		const deleteButton = getByRole("button", { name: "Borrar" })
+		const deleteButton = getAllByRole("button", { name: "Borrar" })[0]
 		fireEvent.click(deleteButton)
 		expect(handleDeleteTodo).toHaveBeenCalledWith(todo.id)
 	})

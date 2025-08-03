@@ -29,9 +29,9 @@ describe("Pruebas en <TodoItem />", () => {
 	})
 
   test("debe de llamar handleDeleteTodo al hacer click en el botón de borrar", () => {
-    const { getByText } = render(<TodoApp />)
+    const { getAllByText } = render(<TodoApp />)
 
-    fireEvent.click(getByText("Borrar"))
+    fireEvent.click(getAllByText("Borrar")[0])
     expect(useTodo().handleDeleteTodo).toHaveBeenCalled()
   })
 
@@ -49,6 +49,6 @@ describe("Pruebas en <TodoItem />", () => {
     fireEvent.change(input, { target: { value: "Nuevo Todo" } })
     fireEvent.submit(input)
 
-    expect(useTodo().onNewTodo).toHaveBeenCalledWith("Nuevo Todo")
+    expect(useTodo().onNewTodo).toHaveBeenCalledWith({todo: "Nuevo Todo", id: expect.any(Number), done: false})
   })
 })
