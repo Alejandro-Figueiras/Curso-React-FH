@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, vitest } from "vitest"
-import { render, fireEvent, screen } from "@testing-library/react"
+import { render, fireEvent } from "@testing-library/react"
 import TodoItem from "../../src/08-useReducer/TodoItem"
 
 describe("Pruebas en <TodoItem />", () => {
@@ -55,7 +55,6 @@ describe("Pruebas en <TodoItem />", () => {
 				onToggleTodo={onToggleTodo}
 			/>
 		)
-		screen.debug()
 		fireEvent.click(getByText(todo.description))
 		expect(onToggleTodo).toHaveBeenCalledWith(todo.id)
 	})
