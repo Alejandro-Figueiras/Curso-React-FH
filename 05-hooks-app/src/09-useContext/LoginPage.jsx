@@ -8,7 +8,7 @@ const LoginPage = () => {
 		<div>
 			<h2>LoginPage</h2>
 			<hr />
-			<pre>{JSON.stringify(user, null, 2)}</pre>
+			<pre>{user ? JSON.stringify(user, null, 2): 'No hay usuario'}</pre>
 
 			<button
 				onClick={() => {
