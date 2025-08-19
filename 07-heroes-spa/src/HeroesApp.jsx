@@ -1,9 +1,10 @@
+import AppRouter from "./router/AppRouter"
 
 function HeroesApp() {
 
   return (
     <>
-      Heroes App
+      <AppRouter />
     </>
   )
 }
