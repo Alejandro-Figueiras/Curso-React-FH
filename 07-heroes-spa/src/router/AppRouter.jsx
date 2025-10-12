@@ -1,5 +1,4 @@
 import { Navigate, Route, Routes } from "react-router"
-import HeroesApp from "../HeroesApp"
 import MarvelPage from "../heroes/pages/MarvelPage"
 import DcPage from "../heroes/pages/DcPage"
 import LoginPage from "../auth/pages/LoginPage"
